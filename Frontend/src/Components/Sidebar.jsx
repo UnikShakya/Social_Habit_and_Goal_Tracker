@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { 
   FaHome, 
@@ -15,18 +14,16 @@ function Sidebar() {
     { name: 'Habits', icon: <FaCheckCircle size={18} />, path: '/habits' },
     { name: 'Statistics', icon: <FaChartBar size={18} />, path: '/stats' },
     { name: 'Calendar', icon: <FaCalendarAlt size={18} />, path: '/calendar' },
-    { name: 'Settings', icon: <FaCog size={18} />, path: '/settings' },
+    // { name: 'Settings', icon: <FaCog size={18} />, path: '/settings' },
   ]
 
   return (
-    <div className='w-64 p-6 h-screen sticky top-0 flex flex-col bg-white'>
-      {/* Logo with bottom spacing */}
+    <div className='w-64 p-6 h-full bg-white flex flex-col'>
       <div className='flex items-center mb-8'>
         <div className='text-2xl mr-2 text-blue-600'><FaBook size={24} /></div>
         <h1 className='text-xl font-bold text-gray-800'>HabitTracker</h1>
       </div>
-      
-      {/* Navigation with subtle separation */}
+
       <nav className='flex-1 mb-6'>
         <ul className='space-y-1'>
           {navItems.map((item) => (
@@ -44,14 +41,13 @@ function Sidebar() {
           ))}
         </ul>
       </nav>
-      
-      {/* Bottom Section with visual separation */}
+
       <div className='mt-auto space-y-6'>
         <div className='space-y-1'>
           <h2 className='text-sm font-semibold text-gray-500'>Today</h2>
-          <p className='text-gray-800'>Friday, 14 June 2024</p>
+          <p className='text-gray-800'>Monday, 04 August 2025</p>
         </div>
-        
+
         <div className='p-3 bg-gray-50 rounded-lg space-y-1'>
           <h2 className='text-sm font-semibold text-gray-500'>Current Streak</h2>
           <p className='text-gray-800'>18 days</p>
@@ -61,4 +57,4 @@ function Sidebar() {
   )
 }
 
-export default Sidebar
+export default Sidebar;

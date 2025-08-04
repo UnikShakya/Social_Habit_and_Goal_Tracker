@@ -87,7 +87,7 @@ function AddGoal() {
       </div>
 
       {/* Goals List */}
-      <div className="mt-6 space-y-3">
+      <div className="mt-6 space-y-3 cursor-pointer">
         {goals.map(goal => (
           <div 
             key={goal.id} 
@@ -136,7 +136,7 @@ function AddGoal() {
               <h2 className="text-2xl font-bold text-gray-800">Create New Goal</h2>
               <button 
                 onClick={() => setIsModalOpen(false)}
-                className="text-gray-400 hover:text-gray-600 text-2xl"
+                className="text-gray-400 hover:text-gray-600 text-2xl cursor-pointer"
               >
                 &times;
               </button>
@@ -167,7 +167,7 @@ function AddGoal() {
                   <button
                     type="button"
                     onClick={toggleRepeat}
-                    className={`relative inline-flex items-center h-6 rounded-full w-11 transition-colors ${goalData.repeat === 'weekly' ? 'bg-[#6C63FF]' : 'bg-gray-300'}`}
+                    className={`relative inline-flex items-center h-6 rounded-full cursor-pointer w-11 transition-colors ${goalData.repeat === 'weekly' ? 'bg-[#6C63FF]' : 'bg-gray-300'}`}
                   >
                     <span className={`inline-block w-4 h-4 transform transition-transform bg-white rounded-full ${goalData.repeat === 'weekly' ? 'translate-x-6' : 'translate-x-1'}`} />
                   </button>
@@ -209,7 +209,7 @@ function AddGoal() {
                 <button
                   type="button"
                   onClick={() => setGoalData(prev => ({ ...prev, reminder: !prev.reminder }))}
-                  className={`relative inline-flex items-center h-6 rounded-full w-11 transition-colors ${goalData.reminder ? 'bg-[#6C63FF]' : 'bg-gray-300'}`}
+                  className={`relative inline-flex items-center h-6 rounded-full cursor-pointer w-11 transition-colors ${goalData.reminder ? 'bg-[#6C63FF]' : 'bg-gray-300'}`}
                 >
                   <span className={`inline-block w-4 h-4 transform transition-transform bg-white rounded-full ${goalData.reminder ? 'translate-x-6' : 'translate-x-1'}`} />
                 </button>
@@ -234,7 +234,7 @@ function AddGoal() {
               <div className="flex pt-4">
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-[#6C63FF] text-white rounded-none hover:bg-[#5A52E0] font-medium shadow-md cursor-pointer"
+                  className="flex-1 py-3 bg-[#6C63FF] text-white rounded-md hover:bg-[#5A52E0] font-medium shadow-md cursor-pointer"
                 >
                   Create Goal
                 </button>
