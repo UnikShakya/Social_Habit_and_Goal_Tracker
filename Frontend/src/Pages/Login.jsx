@@ -22,6 +22,7 @@ function Login() {
       if (res.data.success) {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('username', res.data.username);
+        console.log(res.data.token)
         toast.success('Login successful! Redirecting...');
         setTimeout(() => navigate('/dashboard'), 1500);
       } else {

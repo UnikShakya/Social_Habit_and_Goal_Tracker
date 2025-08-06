@@ -7,7 +7,8 @@ import Main from './Components/Main';
 import Habits from './Pages/Habits';
 import DashboardLayout from './Pages/DashboardLayout';
 import Statistics from './Pages/Statistics';
-import Calendar from './Pages/Calendar';
+// import Calendar from './Pages/Calendar';
+import Buddy from './Pages/Buddy';
 // import Settings from './Pages/Settings';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           <Route path="dashboard" element={<Main />} />
           <Route path="habits" element={<Habits />} />
           <Route path="stats" element={<Statistics />} />
-          <Route path="calendar" element={<Calendar />} />
+          <Route path="buddy" element={<Buddy />} />
           {/* <Route path="settings" element={<Settings />} /> */}
         </Route>
       </Routes>
